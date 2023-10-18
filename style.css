@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background-color: #e0e055;
+  background-color: #fbfbf8;
   height: 100vh;
 }
 
@@ -85,7 +85,7 @@ header {
 }
 
 .home-content .name p {
-  color: #f0f0e6;
+  color: #0f0f0e;
   font-size: 1.5rem;
 }
 
@@ -113,7 +113,7 @@ header {
 }
 
 .about-me .about-heading {
-  color: #25b79f;
+  color: #e9f6f3;
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
@@ -136,7 +136,7 @@ header {
 .skills .skills-heading {
   font-size: 2rem;
   font-weight: 600;
-  color: #25b79f;
+  color: #f6f8f7;
   text-align: center;
 }
 
@@ -155,108 +155,59 @@ header {
 }
 
 /* ///.....Skill Bar....../// */
-
-.skills-bar {
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 25px 30px;
 }
 
-.skills-bar .bar {
-  margin: 25px 0;
-}
-
-.skills-bar .bar .info span {
-  font-size: 1rem;
+.skills h1 {
+  font-size: 56px;
   font-weight: 500;
+  color: #fbfbfb;
+  font-family: "Libre Baskerville", serif;
 }
 
-.skills-bar .bar .info {
-  margin-bottom: 8px;
-  color: #f0f0e6;
+.cards {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 2.5vh;
 }
 
-.skills-bar .bar .progress-line {
-  position: relative;
-  height: 10px;
-  width: 550px;
-  background: #f0f0f0;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+.skill-card {
+  height: 20vw;
+  width: 20vw;
+  background-color: #3d3e42;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  transition: all ease 0.5s;
 }
 
-.bar .progress-line span {
-  position: absolute;
-  background: #25b79f;
-  height: 100%;
-  border-radius: 10px;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+.skill-card:hover {
+  background-color: #fec86a;
 }
 
-@keyframes animate {
-  100% {
-    transform: scaleX(1);
-  }
+.skill-card img {
+  height: 7.5vw;
+  width: 7.5vw;
+  object-fit: contain;
 }
 
-.progress-line .html {
-  width: 80%;
-}
-.progress-line .css {
-  width: 70%;
-}
-.progress-line .bootstrap {
-  width: 50%;
-}
-.progress-line .javascript {
-  width: 50%;
-}
-.progress-line .c {
-  width: 50%;
-}
-
-.bar .progress-line span::before {
-  position: absolute;
-  content: "";
-  height: 0;
-  right: 0;
-  top: -12px;
-  width: 0;
-  border: 7px solid transparent;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-top-style: #f0f0f0;
-  border-top-color: #f0f0f0;
-}
-
-.bar .progress-line span::after {
-  position: absolute;
-  right: 0;
-  top: -28px;
-  color: #07374a;
-  font-size: 12px;
-  font-weight: 700;
-  background: #f0f0f0;
-  padding: 1px 8px;
-  border-radius: 3px;
-}
-
-.progress-line .html::after {
-  content: "80%";
-}
-.progress-line .css::after {
-  content: "70%";
-}
-.progress-line .bootstrap::after {
-  content: "50%";
-}
-.progress-line .javascript::after {
-  content: "50%";
-}
-.progress-line .c::after {
-  content: "50%";
+.skill-card h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fbfbfb;
 }
 
 .navbar.solid {
